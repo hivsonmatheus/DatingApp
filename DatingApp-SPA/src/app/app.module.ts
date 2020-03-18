@@ -13,6 +13,8 @@ import { RouterModule } from "@angular/router";
 import { JwtModule } from "@auth0/angular-jwt";
 import { NgxGalleryModule } from "@kolkov/ngx-gallery";
 import { FileUploadModule } from 'ng2-file-upload';
+import { TimeagoModule } from 'ngx-timeago';
+import {TimeAgoPipe} from 'time-ago-pipe';
 
 import { AppComponent } from "./app.component";
 import { NavComponent } from "./nav/nav.component";
@@ -71,6 +73,7 @@ export class CustomHammerConfig extends HammerGestureConfig {
     RouterModule.forRoot(appRoutes),
     NgxGalleryModule,
     FileUploadModule,
+    TimeagoModule.forRoot(),
     ReactiveFormsModule,
     JwtModule.forRoot({
       config: {
